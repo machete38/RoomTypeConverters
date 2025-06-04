@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "RoomTypeConverters"
 include(":app")
- 
+include(":data")
+include(":database")
