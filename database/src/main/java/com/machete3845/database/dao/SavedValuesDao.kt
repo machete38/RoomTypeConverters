@@ -8,20 +8,19 @@ import androidx.room.Update
 import com.machete3845.database.models.SavedValuesDBO
 
 @Dao
-interface SavedValuesDao {
-
-    @Query("SELECT * FROM savedValues")
-    fun getAllValues(): List<SavedValuesDBO>
+interface AddressResultsDao {
+    @Query("SELECT * FROM addressResults")
+    fun getAllAddressResults(): List<SavedValuesDBO>
 
     @Insert
-    suspend fun insertValue(elements: List<SavedValuesDBO>)
+    suspend fun insertAddressResults(elements: List<SavedValuesDBO>)
 
     @Update
-    suspend fun updateValue(elements: List<SavedValuesDBO>)
+    suspend fun updateAddressResults(elements: List<SavedValuesDBO>)
 
     @Delete
-    suspend fun remove(elements: List<SavedValuesDBO>)
+    suspend fun removeAddressResult(elements: List<SavedValuesDBO>)
 
-    @Query("DELETE FROM savedValues")
+    @Query("DELETE FROM addressResults")
     suspend fun clear()
 }
