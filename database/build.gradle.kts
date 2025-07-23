@@ -13,6 +13,15 @@ kotlin {
     }
 }
 
+android {
+    namespace = "com.example.myapp"
+    compileSdk = 36
+    defaultConfig {
+        minSdk = 24
+    }
+
+}
+
 dependencies{
     implementation(libs.androidx.core.ktx)
     ksp(libs.androidx.room.compiler)
